@@ -69,9 +69,9 @@ function sendTwitterData(tweetCollection) {
 twitterResults(sendTwitterData);
 ```
 
-To briefly explain the process here: we have our function expression, twitterResults() which using the request module places a call to our API for total engagement metrics on the Twitter content source. This function then generates a series of arrays storing the data needed to run our visualizations on the client side. 
+To briefly explain the process here: we have our function expression, `twitterResults()`, which using the request module places a call to our API for total engagement metrics on the Twitter content source. This function then generates a series of arrays storing the data needed to run our visualizations on the client side. 
 
-Once this request is completed and our arrays have been formed, we invoke our callback function, sendTwitterData() which sends the object to our web page via socket once a user connection has been established.  
+Once this request is completed and our arrays have been formed, we invoke our callback function, `sendTwitterData()` which sends the object to our web page via socket once a user connection has been established.  
 
 Most functions throughout our app.js file are built in this fashion. 
 
