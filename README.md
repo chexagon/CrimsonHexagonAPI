@@ -35,7 +35,7 @@ The app is constructed through a series of callback functions which query variou
 
 In our source code, the basis of all function which generate our data look similar to the following: 
 
-```
+```javascript
 var twitterResults = function(callback) {
 
   var monitorId = "2086809677";
