@@ -24,12 +24,6 @@ node app.js
 After initializing the connection to port 3000, you can point your browser at `http://localhost:3000` and examine the site live; note that ending the terminal process will terminate the site. 
 
 
-#Reporting Bugs/ Submitting User Feedback
-
-Please report all bugs/ issues with this app via our Help Center as you would with any other issue. Please be sure to indicate your reference to this demo within the ticket request.
-
-Any feedback is welcomed and can be sent through the same channel mentioned above.
-
 #Source Code
 
 The app is constructed through a series of callback functions which query various ForSight API endpoints and feed the returned data to our c3.js visualization charts. Specifics on JSON structure and data returned from the endpoints can be researched within our [API docs](https://api.crimsonhexagon.com/api/chs/index.html). As mentioned above, both express.js and the socket.io library are used to serve the generated data to our client side web page. 
@@ -80,6 +74,12 @@ To briefly explain the process here: we have our function expression, twitterRes
 Once this request is completed and our arrays have been formed, we invoke our callback function, sendTwitterData() which sends the object to our web page via socket once a user connection has been established.  
 
 Most functions throughout our app.js file are built in this fashion. 
+
+#Reporting Bugs/ Submitting User Feedback
+
+Please report all bugs/ issues with this app via our Help Center as you would with any other issue. Please be sure to indicate your reference to this demo within the ticket request.
+
+Any feedback is welcomed and can be sent through the same channel mentioned above.
 
 
 
