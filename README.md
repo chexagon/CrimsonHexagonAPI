@@ -11,7 +11,7 @@ cd crimsonhexagon_api_demo/
 npm install
 ```
 
-Note that in order to have the demo run locally, you will have to pass in values throughout the code where auth-token and monitor ID’s are queried. These areas have been visibly commented in the source code for your convenience.
+Note that in order to have the demo run locally, you will have to pass in values throughout the code where auth-token (`auth`) and monitor ID’s (`monitorId`) are queried. These variables are both located in the `app.js` file and the areas have been visibly commented in the source code for your convenience.
 
 Along with this, it is important to note that certain dependency files from the `c3.js` and `d3.js` folders have been copied to the `public` folder in our directory. This is so that our express middleware can serve the static files appropriately to our app.
 
