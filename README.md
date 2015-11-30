@@ -1,6 +1,6 @@
 ##Building and Running the Site Locally
 
-The ForSight API visualization demo was built with node.js, the express.js web application framework, and employs the c3.js library to format and generate all data visualizations. Naturally, users wishing to install and run locally will need to have Node installed on their machine before continuing. For users currently without Node, please refer to the Node docs on instructions on how to install. 
+The ForSight API visualization demo was built with [node.js](https://nodejs.org/en/), the [express.js](http://expressjs.com/) web application framework, and employs the [c3.js](http://c3js.org/) library to format and generate all data visualizations. Naturally, users wishing to install and run locally will need to have Node installed on their machine before continuing. For users currently without Node, please refer to the [Node docs](https://nodejs.org/en/download/) on instructions on how to install. 
 
 Once this has been completed, please follow the steps below to begin the build process:
 
@@ -32,7 +32,7 @@ Any feedback is welcomed and can be sent through the same channel mentioned abov
 
 #Source Code
 
-The app is constructed through a series of callback functions which query various ForSight API endpoints and feed the returned data to our c3.js visualization charts. Specifics on JSON structure and data returned from the endpoints can be researched within our API docs. As mentioned above, both express.js and the socket.io library are used to serve the generated data to our client side web page. 
+The app is constructed through a series of callback functions which query various ForSight API endpoints and feed the returned data to our c3.js visualization charts. Specifics on JSON structure and data returned from the endpoints can be researched within our [API docs](https://api.crimsonhexagon.com/api/chs/index.html). As mentioned above, both express.js and the socket.io library are used to serve the generated data to our client side web page. 
 
 In our source code, the basis of all function which generate our data look similar to the following: 
 
