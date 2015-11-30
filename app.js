@@ -83,7 +83,7 @@ fixStartMonth();
 
 var genderCollect = function(callback) {
 
-  var monitorId = "2086803019";
+  var monitorId = '';
   var genderUrl = ('https://forsight.crimsonhexagon.com/api/monitor/demographics/gender?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
 
@@ -125,7 +125,7 @@ genderCollect(logArray);
 
 var fbCollect = function(callback) {
 
-  var monitorId = "2088171268";
+  var monitorId = '';
   var facebookUrl = ('https://forsight.crimsonhexagon.com/api/monitor/facebook/totalactivity?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
 
@@ -168,7 +168,7 @@ fbCollect(logFb);
 
 var monitorResults = function(callback) {
 
-  var monitorId = "2086803019";
+  var monitorId = '';
   var resultsUrl = ('https://api.crimsonhexagon.com/api/monitor/results?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
   var neutralProportion = [];
@@ -210,7 +210,7 @@ monitorResults(sendResultsData);
 
 var twitterVolume = function(callback) {
 
-  var monitorId = "2086803019";
+  var monitorId = '';
   var volumeUrl = ('https://forsight.crimsonhexagon.com/api/monitor/dayandtime?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
   var weeklyVolume = [];
@@ -249,7 +249,7 @@ twitterVolume(sendVolume);
 
 var instagramActivity = function(callback) {
 
-    var monitorId = "2086809591";
+    var monitorId = '';
     var instagramUrl = ('https://forsight.crimsonhexagon.com/api/monitor/instagram/totalactivity?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
 
@@ -292,7 +292,7 @@ var instagramActivity = function(callback) {
 var twitterResults = function(callback) {
 
 
-  var monitorId = "2086809677";
+  var monitorId = '';
   var twitterUrl = ('https://forsight.crimsonhexagon.com/api/monitor/twittersocial/totalengagement?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
 
@@ -345,6 +345,5 @@ app.get('/', function(req, res){
 http.listen(3000, function(){
   console.log('listening on port:3000');
 });
-
 
 
