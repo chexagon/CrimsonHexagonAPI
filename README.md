@@ -14,6 +14,8 @@ npm run build
 
 Note that in order to have the demo run locally, you will have to pass in values throughout the code where auth-token and monitor ID’s are queried. These areas have been visibly commented in the source code for your convenience.
 
+Along with this, it is necessary to move certain dependency files from the `c3.js` and `d3.js` folders to the `public` folder in our directory. This is so that our express middleware can serve the static files appropriately to our app.
+
 Once this has been completed, from the root of the forsight_ directory, it is now possible to run:
 
 ```
