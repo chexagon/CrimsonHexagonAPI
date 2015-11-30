@@ -34,7 +34,7 @@ Any feedback is welcomed and can be sent through the same channel mentioned abov
 
 The app is constructed through a series of callback functions which query various ForSight API endpoints and feed the returned data to our c3.js visualization charts. Specifics on JSON structure and data returned from the endpoints can be researched within our [API docs](https://api.crimsonhexagon.com/api/chs/index.html). As mentioned above, both express.js and the socket.io library are used to serve the generated data to our client side web page. 
 
-In our source code, the basis of all function which generate our data look similar to the following: 
+In our source code, the basis of all functions which generate and send our data are constructed similar to the following: 
 
 ```javascript
 var twitterResults = function(callback) {
