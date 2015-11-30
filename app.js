@@ -5,7 +5,7 @@ var io = require('socket.io')(http);
 var request = require('request');
 
 //update with user generated auth token
-var auth = 'tPfAG7dwHWS_Aj-Xz0Nm2VJ5c2FA2Lk8U_pi5H5mIYA';
+var auth = '';
 
 
 /****************************************************************                                          
