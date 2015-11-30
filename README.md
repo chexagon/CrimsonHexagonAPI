@@ -6,17 +6,16 @@ Once this has been completed, please follow the steps below to begin the build p
 
 ```
 git clone https://github.com/chexagon/crimsonhexagon_api_demo.git
-cd forsight_
+cd crimsonhexagon_api_demo/
 
 npm install
-npm run build
 ```
 
 Note that in order to have the demo run locally, you will have to pass in values throughout the code where auth-token and monitor ID’s are queried. These areas have been visibly commented in the source code for your convenience.
 
-Along with this, it is necessary to move certain dependency files from the `c3.js` and `d3.js` folders to the `public` folder in our directory. This is so that our express middleware can serve the static files appropriately to our app.
+Along with this, it is important to note that certain dependency files from the `c3.js` and `d3.js` folders have been copied to the `public` folder in our directory. This is so that our express middleware can serve the static files appropriately to our app.
 
-Once this has been completed, from the root of the forsight_ directory, it is now possible to run:
+ from the root of the `crimsonhexagon_api_demo/directory`, it is now possible to run:
 
 ```
 node app.js
