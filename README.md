@@ -77,7 +77,7 @@ Most functions throughout our app.js file are built in this fashion.
 
 #Reporting Bugs/ Submitting User Feedback
 
-Please report all bugs/ issues with this app via our Help Center as you would with any other issue. Please be sure to indicate your reference to this demo within the ticket request.
+Please report all bugs/ issues with this app via our [Help Center](https://crimsonhexagon.zendesk.com/hc/en-us) as you would with any other issue. Please be sure to indicate your reference to this demo within the ticket request.
 
 Any feedback is welcomed and can be sent through the same channel mentioned above.
 
