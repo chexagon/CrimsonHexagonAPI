@@ -15,7 +15,7 @@ Note that in order to have the demo run locally, you will have to pass in values
 
 Along with this, it is important to note that certain dependency files from the `c3.js` and `d3.js` folders have been copied to the `public` folder in our directory. This is so that our express middleware can serve the static files appropriately to our app.
 
-From the root of the `crimsonhexagon_api_demo/` directory, it is now possible to run:
+Once all dependencies have been installed, from the root of the `crimsonhexagon_api_demo/` directory, it is now possible to run:
 
 ```
 node app.js
