@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^3.3.6",
     "c3": "^0.4.11-rc4",
     "d3": "^3.5.10",
     "express": "^4.13.3",
