@@ -4,11 +4,10 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var request = require('request');
 
-//update with user generated auth token
-var auth = '';
+var auth = 'tPfAG7dwHWS_Aj-Xz0Nm2VJ5c2FA2Lk8U_pi5H5mIYA';
 
 
-/****************************************************************                                          
+/****************************************************************                                                              
  * functions to reference date parameters in code throughout file*
  ****************************************************************/
 
@@ -18,7 +17,6 @@ var endDay = date.getDate();
 var endYear = date.getFullYear();
 
 //sets end date parameter for calls to API
-//end date in all calls is 7 days from the current date
 var endDate = endYear + '-' + endMonth + '-' + endDay;
 
 var d = new Date();
@@ -28,7 +26,6 @@ var startDay = d.getDate();
 var startYear = d.getFullYear();
 
 //sets start date parameter for calls to API 
-//start date is set to most current date
 var startDate = startYear + '-' + startMonth + '-' + startDay;
 
 
@@ -68,7 +65,6 @@ function fixStartDay() {
     }
 }
 
-
 fixEndMonth();
 fixEndDay(); 
 fixStartDay();
@@ -83,7 +79,7 @@ fixStartMonth();
 
 var genderCollect = function(callback) {
 
-  var monitorId = '';
+  var monitorId = "2086803019";
   var genderUrl = ('https://forsight.crimsonhexagon.com/api/monitor/demographics/gender?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
 
@@ -125,7 +121,8 @@ genderCollect(logArray);
 
 var fbCollect = function(callback) {
 
-  var monitorId = '';
+  var monitorId = "2088171268";
+
   var facebookUrl = ('https://forsight.crimsonhexagon.com/api/monitor/facebook/totalactivity?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
 
@@ -168,7 +165,8 @@ fbCollect(logFb);
 
 var monitorResults = function(callback) {
 
-  var monitorId = '';
+  var monitorId = "2086803019";
+
   var resultsUrl = ('https://api.crimsonhexagon.com/api/monitor/results?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
   var neutralProportion = [];
@@ -210,7 +208,8 @@ monitorResults(sendResultsData);
 
 var twitterVolume = function(callback) {
 
-  var monitorId = '';
+  var monitorId = "2086803019";
+
   var volumeUrl = ('https://forsight.crimsonhexagon.com/api/monitor/dayandtime?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
   var weeklyVolume = [];
@@ -249,7 +248,8 @@ twitterVolume(sendVolume);
 
 var instagramActivity = function(callback) {
 
-    var monitorId = '';
+    var monitorId = "2086809591";
+
     var instagramUrl = ('https://forsight.crimsonhexagon.com/api/monitor/instagram/totalactivity?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
 
@@ -292,7 +292,8 @@ var instagramActivity = function(callback) {
 var twitterResults = function(callback) {
 
 
-  var monitorId = '';
+  var monitorId = "2086809677";
+
   var twitterUrl = ('https://forsight.crimsonhexagon.com/api/monitor/twittersocial/totalengagement?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
 
@@ -329,10 +330,6 @@ function sendTwitterData(tweetCollection) {
 
 twitterResults(sendTwitterData);
 
-/***********************************************************************                                                
- * sets up necessary middleware and express methods to initialie the app *
- ***********************************************************************/ 
-
 //serves static files from the public directory
 app.use(express.static('public'));
 
@@ -345,5 +342,7 @@ app.get('/', function(req, res){
 http.listen(3000, function(){
   console.log('listening on port:3000');
 });
+
+
 
 

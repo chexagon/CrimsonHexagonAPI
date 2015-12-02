@@ -3,6 +3,8 @@
   <head>
     <title>*</title>
     <link href="c3.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
@@ -11,14 +13,64 @@
     <script src="index.js"></script>
   </head>
   <body>
-    <div id="chartContainer">
-    <div id="chart"></div>
-    <div id="chart2"></div>
-    <div id="chart3"></div>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Crimson Hexagon</a>
     </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://api.crimsonhexagon.com/api/chs/index.html">API Docs</a></li>
+        <li><a href="https://github.com/chexagon/crimsonhexagon_api_demo">GitHub</a></li>
+        <li><a href="http://www.crimsonhexagon.com/about/">Get in Touch</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+  <div class="col-md-6">
+    <h2>Crimson Hexagon API Demo</h2>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.Sed sit amet ipsum mauris. </br> Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. </br> Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim,   </div>
+  <div class="col-md-6">
+    <h2>About this Data</h2>
+    The data used to generate the below visualizations have all been gathered via the Crimson Hexagon ForSight platform. Specifics on the data queried can be explored within our API Documentation.  
+   </div>
+  </div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h2>Sample Dashboard</h2>
+    <div class="well well-lg">
+      <div class="row">
+  <div class="col-md-6">
+    <h3>Gender</h3>
+    <div id="chart"></div>
+  </div>
+  <div class="col-md-6">
+    <h3>Sentiment</h3>
+    <div id="chart3"></div>
+  </div>
+</div>
+    <h3>Facebook Engagement Metrics</h3>
+    <div id="chart2"></div>
+    <h3>Weekly Volume</h3>
     <div id="chart4"></div>
+    <h3>Instagram Engagement Metrics</h3>
     <div id="chart5"></div>
+    <h3>Twitter Engagement Metrics</h3>
     <div id="chart6"></div>
+    </div>
+  </div>
+</div>
   </body>
 </html>
 
