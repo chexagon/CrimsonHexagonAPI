@@ -1,8 +1,8 @@
 ##Building and Running the Site Locally
 
-The ForSight API visualization demo was built with [node.js](https://nodejs.org/en/), the [express.js](http://expressjs.com/) web application framework, and employs the [c3.js](http://c3js.org/) library to format and generate all data visualizations. A static preview of this demo can be viewed directly, [here](http://extras.forsight.ch/crimsonhexagon_api_demo/). 
+A static preview of this demo can be viewed directly, [here](http://extras.forsight.ch/crimsonhexagon_api_demo/). 
 
-Naturally, users wishing to install and run this app locally will need to have Node installed on their machine before continuing. For users currently without Node, please refer to the [Node docs](https://nodejs.org/en/download/) on instructions on how to install. 
+The ForSight API visualization demo was built with [node.js](https://nodejs.org/en/), the [express.js](http://expressjs.com/) web application framework, and employs the [c3.js](http://c3js.org/) library to format and generate all data visualizations. Naturally, users wishing to install and run this app locally will need to have Node installed on their machine before continuing. For users currently without Node, please refer to the [Node docs](https://nodejs.org/en/download/) on instructions on how to install. 
 
 Once this has been completed, please follow the steps below to begin the build process:
 
