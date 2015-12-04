@@ -16,12 +16,10 @@ function runDate(callback) {
 
 
 function runSocket(range) {
-    console.log("this is the range" + range);
         var socket = io();
 
         //gender chart
         socket.on('gender', function(data) {
-          console.log(data);
 
           //code to run c3 charts
           var chart = c3.generate({
@@ -45,7 +43,6 @@ function runSocket(range) {
 
         //total activity chart
         socket.on('totalActivity', function(data) {
-          console.log(data);
 
           //code to run c3 charts
           var chart = c3.generate({
@@ -72,7 +69,6 @@ function runSocket(range) {
 
         //sentiment results chart
         socket.on('resultsChart', function(data) {
-          console.log(data);
 
           //code to run c3 chart
           var chart = c3.generate({
@@ -96,7 +92,6 @@ function runSocket(range) {
 
         //volume chart
         socket.on('weeklyVolume', function(data) {
-          console.log(data);
 
           var chart = c3.generate({
             bindto: '#chart4',
@@ -154,7 +149,6 @@ function runSocket(range) {
 
         //instagram metircs chart
         socket.on('instaMetrics', function(data) {
-          console.log(data);
 
           //c3 chart data
           var chart = c3.generate({
