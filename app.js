@@ -328,6 +328,11 @@ function sendTwitterData(tweetCollection) {
 
 twitterResults(sendTwitterData);
 
+
+/******************************                                                              
+ * express.js configurations*
+ ******************************/
+
 //serves static files from the public directory
 app.use(express.static('public'));
 
