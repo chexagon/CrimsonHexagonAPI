@@ -1,63 +1,51 @@
-.navbar-default .navbar-nav>li>a{
-  color:#C32735;
+.navbar-default .navbar-nav>li>a {
+    color: #C32735;
 }
 
 .navbar-default .navbar-brand {
-  color:#C32735;
+    color: #C32735;
 }
 
-.navbar-default{
-background-color:#ffffff;
-
+.navbar-default {
+    background-color: #ffffff;
 }
 
 .navbar-brand>img {
-  max-height: 30px;
-  margin-top: -6px;
+    max-height: 30px;
+    margin-top: -6px;
 }
 
-.page-header{
-  margin-left: 20px;
-  border-bottom: none;
+.page-header {
+    margin-left: 20px;
+    border-bottom: none;
 }
 
 .panel-default>.panel-heading {
-  background-color: #C32735;
-  color: #fff;
+    background-color: #C32735;
+    color: #fff;
 }
 
 .panel-title {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 .well {
-  background-color:#fff;
+    background-color: #fff;
 }
-
 
 .fa-info-circle {
-  margin-left: -2px;
+    margin-left: -2px;
 }
 
-
-/*#chart{
-  margin-left:90px;
+p {
+    padding: 10px;
 }
-
-#chart3{
-  margin-left:90px;
-}*/
-
-p{
-  padding:10px;
-}
-
 
 h1, h2, h3, body {
-  font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
-h2{
-  margin-top:40px;
-  margin-left:20px;
+h2 {
+    margin-top: 40px;
+    margin-left: 20px;
 }
