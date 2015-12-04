@@ -16,18 +16,12 @@ var endMonth  = date.getMonth();
 var endDay = date.getDate();
 var endYear = date.getFullYear();
 
-//sets end date parameter for calls to API
-var endDate = endYear + '-' + endMonth + '-' + endDay;
 
 var d = new Date();
 d.setDate(d.getDate() - 7);
 var startMonth = d.getMonth();
 var startDay = d.getDate();
 var startYear = d.getFullYear();
-
-//sets start date parameter for calls to API 
-var startDate = startYear + '-' + startMonth + '-' + startDay;
-
 
 //ensures that start and end date is formatted properly as API  calls require
 function fixEndMonth() {
@@ -70,7 +64,11 @@ fixEndDay();
 fixStartDay();
 fixStartMonth();
 
+//sets end date parameter for calls to API
+var endDate = endYear + '-' + endMonth + '-' + endDay;
 
+//sets start date parameter for calls to API 
+var startDate = startYear + '-' + startMonth + '-' + startDay;
 
 
 /**************************************                                    

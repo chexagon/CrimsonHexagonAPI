@@ -1,77 +1,150 @@
 <!doctype html>
 <html>
   <head>
-    <title>*</title>
+    <title>
+      Crimson Hexagon API Demo
+    </title>
     <link href="c3.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-    <script src="d3.min.js" charset="utf-8"></script>
-    <script src="c3.min.js"></script>
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+    <script src="/socket.io/socket.io.js">
+    </script>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js">
+    </script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js">
+    </script>
+    <script src="d3.min.js" charset="utf-8">
+    </script>
+    <script src="c3.min.js">
+    </script>
+    <script src="bundle.js">
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Crimson Hexagon</a>
-    </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://api.crimsonhexagon.com/api/chs/index.html">API Docs</a></li>
-        <li><a href="https://github.com/chexagon/crimsonhexagon_api_demo">GitHub</a></li>
-        <li><a href="http://www.crimsonhexagon.com/about/">Get in Touch</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-<div class="panel panel-default">
-  <div class="panel-body">
-    <div class="row">
-  <div class="col-md-6">
-    <h2>Crimson Hexagon API Demo</h2>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.Sed sit amet ipsum mauris. </br> Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. </br> Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim,   </div>
-  <div class="col-md-6">
-    <h2>About this Data</h2>
-    The data used to generate the below visualizations have all been gathered via the Crimson Hexagon ForSight platform. Specifics on the data queried can be explored within our API Documentation.  
-   </div>
-  </div>
-  </div>
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">
+              Toggle navigation
+            </span>
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+          </button>
+          <div class="navbar-brand">
+            
+            <img alt="Logo" src="CH_Logo_transparent.png">
+          </div>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="https://github.com/chexagon/crimsonhexagon_api_demo">
+              <i class="fa fa-github-alt fa-lg">
+              </i>
+            </a>
+          </li>
+          <li>
+            <a href="https://api.crimsonhexagon.com/api/chs/index.html">
+              <i class="fa fa-file-text-o fa-lg">
+              </i>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.crimsonhexagon.com/about">
+              <i class="fa fa-info-circle fa-lg">
+              </i>
+            </a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  <div class="page-header">
+    <h1>
+      Crimson Hexagon API Demo 
+      <small>
+        About this Data
+      </small>
+    </h1>
+    <p>
+      This Demo has been generated with data gathered from the Crimson Hexagon API. All visualizations have been constructed from 
+    </br>
+  analyzed social media data stemming from the ForSight platform. This ranges from Facebook profile engagement metrics, to algorithmically 
+</br>
+classified posts by positive, negative, and neutral sentiment. An accompanying 
+<a href="https://github.com/chexagon/crimsonhexagon_api_demo">
+  GitHub repository
+</a>
+has been created with instruction on 
+</br>
+installing and building this app locally. For additional information on Crimson Hexagon and our software, please visit our 
+<a href="https://crimsonhexagon.com">
+  website.
+</a>
+</p>
 </div>
 <div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title">
+      Sample Dashboard
+    </h1>
+  </div>
   <div class="panel-body">
-    <h2>Sample Dashboard</h2>
-    <div class="well well-lg">
-      <div class="row">
-  <div class="col-md-6">
-    <h3>Gender</h3>
-    <div id="chart"></div>
-  </div>
-  <div class="col-md-6">
-    <h3>Sentiment</h3>
-    <div id="chart3"></div>
-  </div>
-</div>
-    <h3>Facebook Engagement Metrics</h3>
-    <div id="chart2"></div>
-    <h3>Weekly Volume</h3>
-    <div id="chart4"></div>
-    <h3>Instagram Engagement Metrics</h3>
-    <div id="chart5"></div>
-    <h3>Twitter Engagement Metrics</h3>
-    <div id="chart6"></div>
+    <div class="col-md-6">
+      <h2>
+        Gender
+      </h2>
+      <div class="well">
+        <div id="chart">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2>
+        Sentiment
+      </h2>
+      <div class="well">
+        <div id="chart3">
+        </div>
+      </div>
+    </div>
+    <h2>
+      Facebook Engagement Metrics
+    </h2>
+    <div class="well">
+      <div id="chart2">
+      </div>
+    </div>
+    <h2>
+      Weekly Volume
+    </h2>
+    <div class="well">
+      <div id="chart4">
+      </div>
+    </div>
+    <h2>
+      Instagram Engagement Metrics
+    </h2>
+    <div class="well">
+      <div id="chart5">
+      </div>
+    </div>
+    <h2>
+      Twitter Engagement Metrics
+    </h2>
+    <div class="well">
+      <div id="chart6">
+      </div>
     </div>
   </div>
 </div>
-  </body>
+</body>
 </html>
 
 
