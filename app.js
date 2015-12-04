@@ -4,7 +4,8 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var request = require('request');
 
-var auth = 'tPfAG7dwHWS_Aj-Xz0Nm2VJ5c2FA2Lk8U_pi5H5mIYA';
+// auth token used to generate all calls
+var auth = '';
 
 
 /****************************************************************                                                              
@@ -77,7 +78,7 @@ var startDate = startYear + '-' + startMonth + '-' + startDay;
 
 var genderCollect = function(callback) {
 
-  var monitorId = "2086803019";
+  var monitorId = '';
   var genderUrl = ('https://forsight.crimsonhexagon.com/api/monitor/demographics/gender?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
 
@@ -119,7 +120,7 @@ genderCollect(logArray);
 
 var fbCollect = function(callback) {
 
-  var monitorId = "2088171268";
+  var monitorId = '';
 
   var facebookUrl = ('https://forsight.crimsonhexagon.com/api/monitor/facebook/totalactivity?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
@@ -163,7 +164,7 @@ fbCollect(logFb);
 
 var monitorResults = function(callback) {
 
-  var monitorId = "2086803019";
+  var monitorId = '';
 
   var resultsUrl = ('https://api.crimsonhexagon.com/api/monitor/results?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
@@ -206,7 +207,7 @@ monitorResults(sendResultsData);
 
 var twitterVolume = function(callback) {
 
-  var monitorId = "2086803019";
+  var monitorId = '';
 
   var volumeUrl = ('https://forsight.crimsonhexagon.com/api/monitor/dayandtime?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
@@ -246,7 +247,7 @@ twitterVolume(sendVolume);
 
 var instagramActivity = function(callback) {
 
-    var monitorId = "2086809591";
+    var monitorId = '';
 
     var instagramUrl = ('https://forsight.crimsonhexagon.com/api/monitor/instagram/totalactivity?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
@@ -290,7 +291,7 @@ var instagramActivity = function(callback) {
 var twitterResults = function(callback) {
 
 
-  var monitorId = "2086809677";
+  var monitorId = '';
 
   var twitterUrl = ('https://forsight.crimsonhexagon.com/api/monitor/twittersocial/totalengagement?id=' + monitorId + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
