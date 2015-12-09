@@ -7,10 +7,10 @@ The ForSight API visualization demo was built with [node.js](https://nodejs.org/
 Once this has been completed, please follow the steps below to begin the build process:
 
 ```
-git clone https://github.com/chexagon/crimsonhexagon_api_demo.git
-cd crimsonhexagon_api_demo/
+$ git clone https://github.com/chexagon/crimsonhexagon_api_demo.git
+$ cd crimsonhexagon_api_demo/
 
-npm install
+$ npm install
 ```
 
 Note that in order to have the demo run locally, you will have to pass in values throughout the code where auth-token (`auth`) and monitor ID’s (`monitorId`) are queried. These variables are both located in the `app.js` file and the areas have been visibly commented in the source code for your convenience.
@@ -20,7 +20,7 @@ Along with this, it is important to note that certain dependency files from the 
 Once all dependencies have been installed, from the root of the `crimsonhexagon_api_demo/` directory, it is now possible to run:
 
 ```
-node app.js
+$ node app.js
 ```
 
 After initializing the connection to port 3000, you can point your browser at `http://localhost:3000` and examine the site live; note that ending the terminal process will terminate the site. 
@@ -77,9 +77,17 @@ Once this request is completed and our arrays have been formed, we invoke our ca
 
 Most functions throughout our app.js file are built in this fashion. 
 
-##A Quick Note On Dates
+##A Quick Note On Dates & Browserify
 
 All visualizations pull up to date data stemming from the last seven calendar days. On the client side, dates for our charts are generated with the [moment.js](http://momentjs.com/) library and its plugin [twix.js](http://isaaccambron.com/twix.js/). [Browserify](http://browserify.org/) has been used to require these packages within our web page. To change the date ranges for which data has been queried within our API calls, it is necessary to edit the `startDate` and `endDate` variables within our `app.js` file.    
+
+It will be necessary to run the following within the `public` directory:
+
+```
+$ browserify index.js > bundle.js
+```
+This will build our bundle from the `index.js` file and ensure that our required node packages are functional on the client side.
+
 
 #Reporting Bugs/ Submitting User Feedback
 
