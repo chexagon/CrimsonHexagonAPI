@@ -81,12 +81,12 @@ Most functions throughout our app.js file are built in this fashion.
 
 All visualizations pull up to date data stemming from the last seven calendar days. On the client side, dates for our charts are generated with the [moment.js](http://momentjs.com/) library and its plugin [twix.js](http://isaaccambron.com/twix.js/). [Browserify](http://browserify.org/) has been used to require these packages within our web page. To change the date ranges for which data has been queried within our API calls, it is necessary to edit the `startDate` and `endDate` variables within our `app.js` file.    
 
-It will be necessary to run the following within the `public` directory:
+To bundle our client side `index.js` file, it will be necessary to run the following within the `public` directory:
 
 ```
 $ browserify index.js > bundle.js
 ```
-This will build our bundle from the `index.js` file and ensure that our required node packages are functional on the client side.
+This will build our bundle from `index.js` and ensure that our required node packages are functional on the client side.
 
 
 #Reporting Bugs/ Submitting User Feedback
