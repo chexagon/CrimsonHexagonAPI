@@ -1,12 +1,7 @@
 var request = require('request');
 var Twitter = require('twitter');
 
-var client = new Twitter({
-  consumer_key: '9gB7szny2kHOb4R7a4yWlGjDQ',
-  consumer_secret: '3xNVjeq6nwsTtoCVcSbwU6J33e0hHqNFoDJ2icKyqRyBD2DD65',
-  access_token_key: '232719208-V9eMSc5m9uOiF3pKt1vE2mChDxozGLIo2JpZeLzx',
-  access_token_secret: 'PesywDLgI1sSMiHgvKldI3gRZW9yhW6p4FZwXqvr2zShn'
-});
+
 
 /**************************************************
  *make request to forsight api, collect monitor ids*
@@ -14,7 +9,7 @@ var client = new Twitter({
 
 var runQuery = function(callback) {
 
-  var auth = 'tPfAG7dwHWS_Aj-Xz0Nm2VJ5c2FA2Lk8U_pi5H5mIYA';
+  
   var startDate = '2015-10-01';
   var endDate = '2016-01-01';
   var id = '2645325059';
