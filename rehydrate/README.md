@@ -1,8 +1,8 @@
 #Twitter Post Rehydrator
-This app is inteded to be used with the [Crimson Hexagon ForSight API](https://api.crimsonhexagon.com/api/chs/index.html). More specifically, it's intended to be used with the `GET monitor/posts` endpoint of the API. Usage of this app will allow users to rehydrate Twitter posts collected from the ForSight API, with Twitter posts and all their associated metadata returned in `GET statuses/show/:id` of the [Twitter API](https://dev.twitter.com/rest/reference/get/statuses/show/%3Aid). 
+This app is inteded to be used with the [Crimson Hexagon ForSight API](https://api.crimsonhexagon.com/api/chs/index.html). More specifically, it's intended to be used with the `GET monitor/posts` endpoint of the API. Usage of this app will allow users to rehydrate Twitter posts collected from the ForSight API with Twitter posts and all their associated metadata returned in `GET statuses/show/:id` of the [Twitter API](https://dev.twitter.com/rest/reference/get/statuses/show/%3Aid). 
 
 ##A Few Notes
-It will be necessary for those who wish to use this app to have access to the Twitter API. Specifics on gaining access and receiving tokens can be found, here.
+It will be necessary for those who wish to use this app to have access to the Twitter API. Specifics on gaining access and receiving tokens can be found, [here](https://dev.twitter.com/oauth/overview).
 
 Data returned has been limited to the body of the tweets queried, but this can be expanded to include all assocated metadata simply by returning `tweets` in place of `tweets.text` in the `sendIds()` function of the `app.js` file. 
 
