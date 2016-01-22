@@ -1,7 +1,12 @@
 var request = require('request');
 var Twitter = require('twitter');
 
-
+var client = new Twitter({
+  consumer_key: '',
+  consumer_secret: '',
+  access_token_key: '',
+  access_token_secret: ''
+});
 
 /**************************************************
  *make request to forsight api, collect monitor ids*
@@ -9,10 +14,11 @@ var Twitter = require('twitter');
 
 var runQuery = function(callback) {
 
+  var auth = '';
   
   var startDate = '2015-10-01';
   var endDate = '2016-01-01';
-  var id = '2645325059';
+  var id = '';
 
   var url = ('https://api.crimsonhexagon.com/api/monitor/posts?id=' + id + '&start=' + startDate + '&end=' + endDate + '&auth=' + auth);
 
